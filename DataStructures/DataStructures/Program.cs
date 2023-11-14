@@ -1,4 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using DataStructures;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
+// See https://aka.ms/new-console-template for more information
 
 // Data Structure #1 - Stack
 /* 
@@ -134,8 +138,103 @@ foreach (var item in linkedList)
 
 
 /*------------------------------------------------------------------------*/
-// Data Structure #6 - Static Array / Dynamic Array / ArrayList
+// Data Structure #6 - Static Array / Dynamic Array / ArrayList - Didnt finish
 
 
+/*DynamicArray dynamicArray = new DynamicArray();
+dynamicArray.Add("A");
+dynamicArray.Add("B");
+dynamicArray.Add("C");
+foreach (var item in dynamicArray)
+{
+Console.WriteLine(item);
+
+}*/
+
+/*------------------------------------------------------------------------*/
+
+// Big O Notation
+/*
+ How code slows as data grows.
+Big O notation is notation used to describe the performance of an algorythm
+as an amount of data increases.
+ 
+O(1) = Constant time
+- random access of an element in an array
+- inserting at the beginning of linkedList
+
+O(log n) = logarithmic time
+- binary search
+
+O(N) = linear time
+- looping through elements in an array
+- searching through a linkedlist
+
+O(n log n) = quasilinear time
+- quick sort
+- merge sort
+- head sort
+
+O(n^2) = quadratic time
+- insertion sort
+- selection sort
+- bubblesort
+
+O(n!) = factorial time
+- traveling salesman problem
+
+ */
+
+/*------------------------------------------------------------------------*/
+
+// Algorithm #1 - linear search
+
+/*
+ 
+Linear search = Iterate through a collection one element at a time
+
+Runtime complexity: O(n)
 
 
+Disadvatages:
+-Slow for large data sets
+
+Advantages:
+-Fast for searches of small to medium data sets
+-Does not need to be sorted
+-Useful for data structures that do not have random access (Linked List)
+
+
+ */
+
+/*int[] array1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 3213, 44 };
+int index = linearSearch(array1, 5);
+
+if (index != -1)
+    Console.WriteLine("Element found at " + index);
+else
+    Console.WriteLine("Element not found");
+
+
+static int linearSearch(int[] array, int value)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] == value)
+        {
+            return i;
+        }
+    }
+    return -1;
+}*/
+
+/*------------------------------------------------------------------------*/
+
+// Algorithm #2 - biary search
+
+/*
+ Search algorithm that finds the position of a target value within a sorted array.
+Half of the array is eliminated during each "step".
+
+
+ */
