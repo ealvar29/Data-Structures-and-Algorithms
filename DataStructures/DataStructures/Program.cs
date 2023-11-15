@@ -430,3 +430,45 @@ void insertionSort(int[] arr)
         arr[j + 1] = temp;  
     }
 }*/
+
+/*------------------------------------------------------------------------*/
+
+// Recursion = When a thing is defined in terms of itself - Wikipedia
+/*
+    Apply the result of a procedure, to a procedure.
+    A recursive method calls itself. Can be a substitue for iteration.
+    Divide a problem into a sub-problems of the same type as the original.
+    commonly used with advanced sorting algorithms and navigating trees.
+    
+    Advantages - Easier to read / write
+               - easier to debug
+
+    Disadvantages - sometimes slower
+                  - uses more memory
+ */
+
+/*walk(5);
+
+// Iterative approach to walking
+void walk(int steps)
+{
+    for (int i = 0; i < steps; i++)
+    {
+        Console.WriteLine("You took a step! ");
+    }
+}
+
+// Recursive approach to walking
+recursiveWalk(5);
+
+void recursiveWalk(int steps)
+{
+    if (steps < 1)
+    { return; }
+    Console.WriteLine("You took a step");
+    recursiveWalk(steps - 1);
+}*/
+
+/*------------------------------------------------------------------------*/
+
+// Recursion = When a thing is defined in terms of itself - Wikipedia
