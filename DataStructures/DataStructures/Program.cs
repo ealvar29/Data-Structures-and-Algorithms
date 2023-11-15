@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 // See https://aka.ms/new-console-template for more information
 
 // Data Structure #1 - Stack
@@ -233,8 +234,99 @@ static int linearSearch(int[] array, int value)
 // Algorithm #2 - biary search
 
 /*
- Search algorithm that finds the position of a target value within a sorted array.
-Half of the array is eliminated during each "step".
-
+ Explanation: Divide and conquer strategy to
+ efficiently find a target element in a sorted array.
+ 
+ Search algorithm that finds the position of 
+ a target value within a sorted array.
+ 
+ Half of the array is eliminated during each "step".
 
  */
+
+/*int[] ints = new int[100000];
+
+int target = 77742;
+for (int i = 0; i < ints.Length; i++)
+{
+    ints[i] = i;
+}*/
+// Array.BinarySearch is a built in method
+/*int index = Array.BinarySearch(ints, target);
+if (index == -1)
+    Console.Write(target + " not found");
+else 
+    Console.Write("Element found at " +  index);*/
+
+/*int index2 = BinarySearch(ints, target);
+
+// Creating Binary search algorithm from scratch! 
+int BinarySearch(int[] arr, int target)
+{
+    int low = 0;
+    int high = arr.Length - 1;
+    while (low <= high)
+    {
+        int middle = low + (high - low) / 2;
+        int value = arr[middle];
+        Console.WriteLine("Middle:" + value);
+        if (value < target)
+            low = middle + 1;
+         else if (value > target)
+            high = middle - 1;
+        else return middle;
+    }
+
+
+    return -1; // target not found;
+}*/
+
+/*------------------------------------------------------------------------*/
+
+// Algorithm #3 - Interpolation search
+
+/*
+    Interpolation Search = improvement over binary search.
+    Best used for "uniformly" distributed "guesses"
+    where a value might be based on calculated probe results
+    If probe is incorrect, search area is narrowed and a new probe
+    is construcucted.
+    
+    average case: O(log(log(n)))
+    worse case: O(N) [values increase exponentially]
+ */
+
+/*int[] arr = { 1,2,4, 8, 16, 32, 64, 128, 256, 512, 1024 };
+
+int index = interpolationSearch(arr, 256);
+if (index != -1)
+{
+    Console.WriteLine("Element found at index: " + index);
+}
+else
+    Console.WriteLine("Element not found");
+
+int interpolationSearch(int[] arr, int target)
+{
+    int high = arr.Length - 1;
+    int low = 0;
+
+    while (target >= arr[low] && target <= arr[high] && low <= high)
+    {
+        int probe = low + (high - low) 
+            * (target - arr[low]) 
+            / (arr[high] - arr[low]);
+
+        Console.WriteLine("probe:" + probe);
+        if (arr[probe] == target)
+            return probe;
+        else if (arr[probe] < target)
+            low = probe + 1;
+        else high = probe - 1;
+    }
+    return -1;
+}*/
+
+/*------------------------------------------------------------------------*/
+
+// Algorithm #4 - Bubble search
