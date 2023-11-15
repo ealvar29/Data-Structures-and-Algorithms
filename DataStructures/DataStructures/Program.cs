@@ -374,7 +374,7 @@ int[] bubbleSort(int[] arr)
     large data set = terrible
  */
 
-int[] arr = { 8, 2, 6, 4, 3, 1, 9, 7, 0, 1, 5 };
+/*int[] arr = { 8, 2, 6, 4, 3, 1, 9, 7, 0, 1, 5 };
 selectionSort(arr);
 Console.WriteLine(arr);
 void selectionSort(int[] arr)
@@ -394,4 +394,39 @@ void selectionSort(int[] arr)
         arr[i] = arr[min];
         arr[min] = temp;
     }
-}
+}*/
+
+/*------------------------------------------------------------------------*/
+
+// Algorithm #6 - Insertion Sort
+
+/*
+    Insertion Sort = after comparing elements to the left
+    shift elements to the right to make room to insert a value
+
+    Quadratic time O(n^2)
+    small data set = decent
+    large data set = terrible
+
+    less steps than bubble sort
+    best case is O(n) compared to selection sort O(n^2)
+ 
+ */
+
+/*int[] arr = { 9, 1, 8, 2, 7, 3, 6, 4, 5 };
+insertionSort(arr);
+
+void insertionSort(int[] arr)
+{
+    for (int i = 1; i < arr.Length; i++)
+    {
+        int temp = arr[i];
+        int j = i - 1;
+        while (j >= 0 && arr[j] > temp)
+        {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = temp;  
+    }
+}*/
