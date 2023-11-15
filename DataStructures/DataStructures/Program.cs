@@ -330,3 +330,68 @@ int interpolationSearch(int[] arr, int target)
 /*------------------------------------------------------------------------*/
 
 // Algorithm #4 - Bubble search
+
+/*
+    Bubble Sort = pairs of adjacent elements are compared and the elements
+    are swapped if they are not in order.
+    Quadratic time O(n^2)
+    small data set = okay-ish
+    large data set = terrible
+ 
+ */
+
+/*int[] arr = { 9, 1, 8, 2, 7, 3, 6, 4, 5 };
+bubbleSort(arr);
+int[] bubbleSort(int[] arr)
+{
+    int[] sorted = new int[arr.Length];
+    for (int i = 0; i < arr.Length - 1; i++)
+    {
+        for (int j = 0; j < arr.Length - i - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    return arr;
+}*/
+
+/*------------------------------------------------------------------------*/
+
+// Algorithm #5 - Selection Sort
+
+/*
+    Selection Sort = search through an array and keep track 
+    of the min. value during each iteration. At the end of each iteration,
+    we swap variables. 
+    
+    Quadratic time O(N^2)
+    small data set = okay;
+    large data set = terrible
+ */
+
+int[] arr = { 8, 2, 6, 4, 3, 1, 9, 7, 0, 1, 5 };
+selectionSort(arr);
+Console.WriteLine(arr);
+void selectionSort(int[] arr)
+{
+    for (int i = 0; i < arr.Length - 1; i++)
+    {
+        int min = i;
+        for (int j = i + 1; j < arr.Length; j++)
+        {
+            // For sort algorithm, if you want descending, swap > to <
+            if (arr[min] > arr[j])
+            {
+                min = j;
+            }
+        }
+        int temp = arr[i];
+        arr[i] = arr[min];
+        arr[min] = temp;
+    }
+}
